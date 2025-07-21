@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Tweeter - Project</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .project-page { min-height: 100vh; padding: 120px 0 60px; background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%); }
+        .project-header { text-align: center; color: white; margin-bottom: 3rem; }
+        .project-title { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
+        .project-subtitle { font-size: 1.2rem; opacity: 0.9; }
+        .back-button { position: fixed; top: 100px; left: 20px; background: rgba(255,255,255,0.9); color: #333; padding: 12px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; z-index: 1000; backdrop-filter: blur(10px); }
+        .back-button:hover { background: white; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .description-section { background: white; border-radius: 20px; padding: 3rem; margin-bottom: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .description-section h2 { color: #333; font-size: 2rem; margin-bottom: 1.5rem; text-align: center; }
+        .description-section p { color: #666; line-height: 1.8; font-size: 1.1rem; text-align: center; max-width: 800px; margin: 0 auto; }
+        .features-list { margin: 2rem auto 0; max-width: 700px; }
+        .features-list li { color: #444; font-size: 1rem; margin-bottom: 0.7rem; }
+        @media (max-width: 768px) { .project-title { font-size: 2rem; } .back-button { position: relative; top: auto; left: auto; display: inline-block; margin-bottom: 2rem; } }
+    </style>
+</head>
+<body>
+    <a href="../index.html#projects" class="back-button"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+    <section class="project-page">
+        <div class="container">
+            <div class="project-header">
+                <h1 class="project-title">Bird Tweeter</h1>
+                <p class="project-subtitle">An IoT bird feeder that tweets photos of visiting birds using ESP32-CAM and Python.</p>
+            </div>
+            <div class="description-section">
+                <h2>About the Project</h2>
+                <p>
+                    Bird Tweeter is an IoT bird feeder that captures photos of birds and posts them to Twitter. It uses an ESP32-CAM for wireless image capture, motion detection, and Python scripts for automation and species identification.
+                </p>
+                <ul class="features-list">
+                    <li>ESP32-CAM for wireless image capture and motion detection</li>
+                    <li>Automated tweets with Python and Tweepy</li>
+                    <li>Bird species identification using iNaturalist API</li>
+                    <li>Filters out non-bird visitors (like squirrels)</li>
+                    <li>Real-time notifications and logging</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backButton = document.querySelector('.back-button');
+            if (backButton) {
+                backButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const url = this.getAttribute('href');
+                    document.body.style.transition = 'opacity 0.3s ease-out';
+                    document.body.style.opacity = '0';
+                    setTimeout(() => { window.location.href = url; }, 300);
+                });
+            }
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.3s ease-in';
+            setTimeout(() => { document.body.style.opacity = '1'; }, 100);
+        });
+    </script>
+</body>
+</html> 

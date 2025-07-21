@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Climbing - Jared's Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .interest-page {
+            min-height: 100vh;
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .interest-header {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        
+        .interest-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .interest-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .back-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .image-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 15px 15px 0 0;
+            background: #f8f9fa;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .image-overlay i {
+            color: white;
+            font-size: 3rem;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        
+        .image-container:hover .image-overlay {
+            background: rgba(0, 0, 0, 0.1);
+        }
+        
+        .image-container:hover .image-overlay i {
+            opacity: 0.3;
+            transform: scale(0.8);
+        }
+        
+        .image-container:hover .gallery-image {
+            transform: scale(1.05);
+        }
+        
+        .gallery-media {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .gallery-caption {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .gallery-caption h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .gallery-caption p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .description-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .description-section h2 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .description-section p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .interest-title {
+                font-size: 2rem;
+            }
+            
+            .back-button {
+                position: relative;
+                top: auto;
+                left: auto;
+                display: inline-block;
+                margin-bottom: 2rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#interests" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back to Interests
+    </a>
+    
+    <section class="interest-page">
+        <div class="container">
+            <div class="interest-header">
+                <h1 class="interest-title">Rock Climbing</h1>
+                <p class="interest-subtitle">Conquering heights and solving physical puzzles</p>
+            </div>
+            
+            <div class="description-section">
+                <h2>My Climbing Journey</h2>
+                <p>
+                    Rock climbing has become one of my greatest passions, combining physical strength with mental problem-solving. 
+                    Whether I'm bouldering indoors or tackling outdoor routes, each climb presents a unique challenge that requires 
+                    careful planning, technique, and determination. The sport has taught me patience, focus, and the importance of 
+                    pushing through difficult situations - skills that translate perfectly to my engineering work.
+                </p>
+            </div>
+            
+
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="image-container">
+                        <img src="../images/climbing/climbingindoor.PNG" alt="Indoor climbing session" class="gallery-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Indoor Bouldering</h3>
+                        <p>Working on technique and problem-solving at the local climbing gym</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="image-container">
+                        <img src="../images/climbing/pullupbar.PNG" alt="Strength training for climbing" class="gallery-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Strength Training</h3>
+                        <p>Building upper body strength and grip power for climbing</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="image-container">
+                        <img src="../images/climbing/climbingoutdoor.PNG" alt="Outdoor climbing adventure" class="gallery-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Outdoor Adventure</h3>
+                        <p>Exploring natural rock formations and outdoor climbing spots</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="../script.js"></script>
+    <script>
+        // Simple image gallery functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageContainers = document.querySelectorAll('.image-container');
+            
+            imageContainers.forEach((container, index) => {
+                const image = container.querySelector('.gallery-image');
+                const overlay = container.querySelector('.image-overlay');
+                
+                // Add click effect
+                container.addEventListener('click', function() {
+                    // Add a subtle click animation
+                    container.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        container.style.transform = '';
+                    }, 150);
+                });
+                
+                // Log successful image loading
+                image.addEventListener('load', function() {
+                    console.log(`Image ${index + 1} loaded successfully`);
+                });
+                
+                // Log any image errors
+                image.addEventListener('error', function() {
+                    console.log(`Image ${index + 1} failed to load`);
+                });
+            });
+            
+            // Add smooth transition for back button
+            const backButton = document.querySelector('.back-button');
+            if (backButton) {
+                backButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const url = this.getAttribute('href');
+                    
+                    // Add fade-out effect
+                    document.body.style.transition = 'opacity 0.3s ease-out';
+                    document.body.style.opacity = '0';
+                    
+                    // Navigate after fade-out to interests section
+                    setTimeout(() => {
+                        // The href already includes #interests, so use it directly
+                        window.location.href = url;
+                    }, 300);
+                });
+            }
+            
+            // Add fade-in effect when page loads
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.3s ease-in';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jared's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Jared</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#interests" class="nav-link">Interests</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Hello, I'm</span>
+                        <span class="title-highlight">Jared</span>
+                    </h1>
+                    <p class="hero-subtitle">Computer Engineering Enthusiast & Hardware Developer</p>
+                    <p class="hero-description">
+                        I design and build embedded systems, automate hardware solutions, and program microcontrollers. 
+                        Passionate about C++, hardware integration, and creating efficient, real-world applications.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#experience" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                                <div class="hero-visual">
+                    <div class="hero-image">
+                        <img src="images/home/jaredpfp.JPG" alt="Jared" class="profile-image">
+                    </div>
+                    <div class="floating-elements">
+                        <div class="floating-card" data-speed="2">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="floating-card" data-speed="1.5">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="floating-card" data-speed="2.5">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hardware & Embedded Projects</h2>
+                <p class="section-subtitle">Here are some of my microcontroller and automation projects</p>
+            </div>
+            <div class="projects-section">
+                <div class="projects-grid">
+                    <div class="project-card" onclick="window.location.href='projects/skull-king.html'">
+                        <div class="project-icon"><i class="fas fa-chess-king"></i></div>
+                        <h3 class="project-title">Skull King</h3>
+                        <p class="project-description">A digital version of the classic card game, built with C++ and a custom UI.</p>
+                        <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
+                    </div>
+                    <div class="project-card" onclick="window.location.href='projects/rfid-project.html'">
+                        <div class="project-icon"><i class="fas fa-id-card"></i></div>
+                        <h3 class="project-title">RFID Project</h3>
+                        <p class="project-description">A secure RFID-based access control system using Arduino and MFRC522.</p>
+                        <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
+                    </div>
+                    <div class="project-card" onclick="window.location.href='projects/bird-tweeter.html'">
+                        <div class="project-icon"><i class="fas fa-dove"></i></div>
+                        <h3 class="project-title">Bird Tweeter</h3>
+                        <p class="project-description">An IoT bird feeder that tweets photos of visiting birds using ESP32-CAM and Python.</p>
+                        <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">My professional journey and achievements</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Delivery Driver</h3>
+                            <span class="timeline-company">Domino's Pizza</span>
+                            <span class="timeline-date">2023 - Present</span>
+                        </div>
+                        <p class="timeline-description">
+                            Providing excellent customer service while ensuring timely and accurate deliveries. 
+                            Managing multiple orders efficiently, maintaining vehicle safety, and handling cash transactions. 
+                            Developed strong time management and customer interaction skills in a fast-paced environment.
+                        </p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Customer Service</span>
+                            <span class="skill-tag">Time Management</span>
+                            <span class="skill-tag">Navigation</span>
+                            <span class="skill-tag">Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Education & Learning</h3>
+                            <span class="timeline-company">Self-Directed</span>
+                            <span class="timeline-date">Ongoing</span>
+                        </div>
+                        <p class="timeline-description">
+                            Passionately learning computer engineering and embedded systems through online courses, 
+                            tutorials, and hands-on projects. Building expertise in C++, microcontroller programming, 
+                            hardware design, and automation systems to transition into a computer engineering career.
+                        </p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">Microcontrollers</span>
+                            <span class="skill-tag">Hardware Design</span>
+                            <span class="skill-tag">Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Personal Projects</h3>
+                            <span class="timeline-company">Portfolio & Learning</span>
+                            <span class="timeline-date">2024</span>
+                        </div>
+                        <p class="timeline-description">
+                            Creating hardware and embedded system projects to showcase engineering skills. 
+                            Building microcontroller-based systems, automation solutions, and IoT devices 
+                            that demonstrate practical application of computer engineering principles.
+                        </p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Embedded Systems</span>
+                            <span class="skill-tag">IoT Development</span>
+                            <span class="skill-tag">Hardware Integration</span>
+                            <span class="skill-tag">System Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Interests & Hobbies</h2>
+                <p class="section-subtitle">What I'm passionate about beyond coding</p>
+            </div>
+            <div class="interests-grid">
+                <div class="interest-card" onclick="window.location.href='interests/rock-climbing.html'">
+                    <div class="interest-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3 class="interest-title">Rock Climbing</h3>
+                    <p class="interest-description">
+                        I love the challenge and problem-solving aspect of rock climbing. 
+                        It's like solving a physical puzzle while building strength and mental focus. 
+                        Both indoor and outdoor climbing keep me motivated and push my limits.
+                    </p>
+                    <div class="interest-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="interest-card" onclick="window.location.href='interests/video-games.html'">
+                    <div class="interest-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3 class="interest-title">Video Games</h3>
+                    <p class="interest-description">
+                        Gaming is my passion for storytelling, strategy, and immersive experiences. 
+                        I enjoy everything from competitive multiplayer games to story-driven RPGs. 
+                        It's a great way to unwind and connect with friends online.
+                    </p>
+                    <div class="interest-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+
+
+                <div class="interest-card" onclick="window.location.href='interests/hiking.html'">
+                    <div class="interest-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3 class="interest-title">Outdoors</h3>
+                    <p class="interest-description">
+                        Exploring nature, hiking, and enjoying the beauty of the outdoors.
+                    </p>
+                    <div class="interest-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="interest-card" onclick="window.location.href='interests/cooking.html'">
+                    <div class="interest-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="interest-title">Food</h3>
+                    <p class="interest-description">
+                        I love exploring new restaurants and enjoying great food with friends and family.
+                    </p>
+                    <div class="interest-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="interest-card" onclick="window.location.href='interests/dogs.html'">
+                    <div class="interest-icon">
+                        <i class="fas fa-dog"></i>
+                    </div>
+                    <h3 class="interest-title">My Dogs</h3>
+                    <p class="interest-description">
+                        Dogs have always been a big part of my life—loyal companions, adventure buddies, and endless sources of joy.
+                    </p>
+                    <div class="interest-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="interest-card" onclick="window.location.href='interests/other.html'">
+                    <div class="interest-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="interest-title">Other Interests</h3>
+                    <p class="interest-description">
+                        A few more things I enjoy and find interesting outside of my main hobbies.
+                    </p>
+                    <div class="interest-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Let's Connect</h3>
+                    <p class="footer-description">
+                        I'm always interested in new opportunities and collaborations. 
+                        Feel free to reach out!
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <div class="social-links">
+                        <a href="https://github.com/jaredbeyers" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/jared-beyers/" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/JaredBeyers" target="_blank" class="social-link" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" title="jaredcbeyers@gmail.com" onclick="copyEmail(event)"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jared. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

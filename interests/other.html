@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Interests - Jared's Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .interest-page {
+            min-height: 100vh;
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .interest-header {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        .interest-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .interest-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        .back-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        .gallery-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .gallery-caption {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .gallery-caption h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .gallery-caption p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .description-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .description-section h2 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .description-section p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .interest-title {
+                font-size: 2rem;
+            }
+            .back-button {
+                position: relative;
+                top: auto;
+                left: auto;
+                display: inline-block;
+                margin-bottom: 2rem;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#interests" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back to Interests
+    </a>
+    <section class="interest-page">
+        <div class="container">
+            <div class="interest-header">
+                <h1 class="interest-title">Other Interests</h1>
+                <p class="interest-subtitle">A few more things I enjoy and find interesting</p>
+            </div>
+            <div class="description-section">
+                <h2>Beyond My Main Hobbies</h2>
+                <p>
+                    Here are a few more things I enjoy—whether it's capturing moments, spending time with friends, or just appreciating the little things in life.
+                </p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="../images/other/mae.jpg" alt="Mae" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Mae</h3>
+                        <p>Spending time with my wonderful girlfriend, Mae.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/other/clouds.jpg" alt="Clouds" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Clock Tower at Sunset</h3>
+                        <p>Golden hour in downtown Denton</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/other/puzzle.jpg" alt="Puzzle" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Everyday Joys</h3>
+                        <p>Appreciating the small things that make life special.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../script.js"></script>
+    <script>
+        // Smooth transition for back button
+        document.addEventListener('DOMContentLoaded', function() {
+            const backButton = document.querySelector('.back-button');
+            if (backButton) {
+                backButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const url = this.getAttribute('href');
+                    document.body.style.transition = 'opacity 0.3s ease-out';
+                    document.body.style.opacity = '0';
+                    setTimeout(() => {
+                        window.location.href = url;
+                    }, 300);
+                });
+            }
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.3s ease-in';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html> 
